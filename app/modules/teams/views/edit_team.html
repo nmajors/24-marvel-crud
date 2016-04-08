@@ -1,0 +1,28 @@
+<h1>Editing the {{editCtrl.teams.name}} ({{ editCtrl.heroes.length }}/6)</h1>
+
+<form ng-submit="editCtrl.addCharacter()" ng-hide="editCtrl.heroes.length >= 6">
+  <input type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
+  <input id = "submit" type="submit" value="Add Hero">
+</form>
+
+<h2 ng-show="editCtrl.heroes.length >= 6">Your Team is complete. <a ui-sref="teams">Go back to the team list.</a></h2>
+
+<table>
+  <tbody>
+    <tr ng-repeat="hero in editCtrl.heroes">
+      <td class = "heroImage">
+        <img ng-src="{{ hero.image }}">
+      </td>
+        <td>
+        <h1>
+          {{ hero.name }}
+          <i class="fa fa-times-circle" ng-click="editCtrl.deleteCharacter(hero)"></i>
+        </h1>
+
+        <span>{{ hero.description }}</span>
+      </td>
+edit this pita
+
+    </tr>
+  </tbody>
+</table>

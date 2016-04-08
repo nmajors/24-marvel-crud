@@ -45,18 +45,65 @@ class EditTeamController {
 
 	constructor($http, $stateParams) {
     this._$http = $http;
+		this.$stateParams = $stateParams;
+		this.id = this.$stateParams.id;
+		this.newHeroName="";
+		this.heroes=[];
 
-
-    this.getData();
+		this.getData();
 	}
 
   getData() {
+
+
+		this._$http
+		.get(`https://teams.mybluemix.net/api/teams/${this.id}`)
+		.then((response) =>{
+			console.log(response);
+			this.team=response.data;
+		});
+		this._$http
+		.get(`https://teams.mybluemix.net/api/heroes?filter[where][team_id]=${this.id}`)
+		.then((response) =>{
+			// console.log(response)
+			this.hero=response.data;
+		});
+
   }
 
   addCharacter() {
-  }
+		this._$http
+		.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.newHeroName}&apikey=ed7601d2962065f2fc12241cbc32a585`)
+		.then((response) =>{
+			// console.log(response);
+			this.name=response.data.data.results[0].name;
+			this.marvel_id=response.data.data.results[0].id;
+			this.description=response.data.data.results[0].description;
+			this.team_id=this.id;
+			this.image=`${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
 
+			this._$http
+			.post(`https://teams.mybluemix.net/api/heroes`, {
+	        name: this.name,
+	        marvel_id: this.marvel_id,
+					description: this.description,
+					team_id: this.team_id,
+					image: this.image
+	      })
+			.then((response) =>{
+				this.heroes.push(response.data);
+				console.log(this.heroes);
+
+				this.newHeroName="";
+			});
+		});
+  }
   deleteCharacter(hero) {
+		this._$http
+		.get(`https://teams.mybluemix.net/api/heroes/${this.id}`)
+		.then((response) =>{
+			this.heroes.splice(this.heroes.indexOf(hero), 1);
+		});
   }
 
 }

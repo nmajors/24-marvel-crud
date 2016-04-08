@@ -20,8 +20,9 @@ class TeamsController {
     this._$http
       .get(`https://teams.mybluemix.net/api/teams`)
       .then((response) => {
-        this.teams = response.data;
-      })
+        this.teams=response.data;
+				console.log(this.teams);
+      });
   }
 
 }
