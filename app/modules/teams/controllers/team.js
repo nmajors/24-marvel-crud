@@ -35,8 +35,9 @@ class TeamController {
 		this._$http
 		.get(`https://teams.mybluemix.net/api/teams/${this.id}`)
 		.then((response) =>{
-			console.log(response);
+			// console.log(response);
 			this.team=response.data;
+			console.log(this.team);
 		});
 		this._$http
 		.get(`https://teams.mybluemix.net/api/heroes?filter[where][team_id]=${this.id}`)

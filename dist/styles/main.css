@@ -1,0 +1,141 @@
+body {
+  font-family: Helvetica; }
+
+.editTeam {
+  margin: 0 75px; }
+  .editTeam form {
+    margin-bottom: 20px; }
+  .editTeam input {
+    outline: none;
+    font-size: 1.5em;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 2px 6px; }
+  .editTeam #submit {
+    margin-left: 10px;
+    background-color: white;
+    color: black; }
+  .editTeam table {
+    border-top: 1px solid #aaa;
+    padding-top: 15px; }
+  .editTeam .characterImage {
+    width: 20%;
+    padding-right: 30px; }
+  .editTeam td {
+    vertical-align: top; }
+  .editTeam img {
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 20px; }
+  .editTeam h1 {
+    margin-top: 0; }
+  .editTeam i {
+    color: #A00000;
+    float: right; }
+  .editTeam span {
+    display: inline-block;
+    margin-bottom: 30px; }
+
+.newTeam {
+  margin: 0 75px; }
+  .newTeam h1 {
+    color: black;
+    font-size: 3.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 0; }
+  .newTeam .headline {
+    color: #777;
+    font-weight: 300;
+    font-size: 2rem; }
+  .newTeam h2 {
+    display: inline-block;
+    width: 13%; }
+  .newTeam .textbox {
+    padding-left: 20px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 30px; }
+  .newTeam .textboxPrompt {
+    display: block;
+    padding-left: 13%;
+    color: #777; }
+  .newTeam .submitButton {
+    background-color: #eee;
+    color: #black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-left: 13%; }
+
+.teams {
+  margin: 0 75px; }
+  .teams h1 {
+    color: black;
+    font-size: 3.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 0; }
+  .teams .headline {
+    color: #777;
+    font-weight: 300;
+    font-size: 2rem; }
+  .teams .newTeamLink {
+    display: inline-block;
+    float: right;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #2C689D;
+    border-radius: 5px; }
+  .teams .teamName {
+    font-weight: bolder;
+    display: inline; }
+  .teams li {
+    line-height: 1.5; }
+  .teams a {
+    color: #2C689D; }
+
+.team {
+  margin: 0 75px; }
+  .team .teamIdentification {
+    font-size: 3rem;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 0; }
+  .team span {
+    color: #aaa;
+    font-weight: lighter;
+    font-size: 1.5rem; }
+  .team h2 {
+    font-weight: normal; }
+    .team h2 a {
+      text-decoration: none; }
+  .team .hero {
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px; }
+  .team .characterImage {
+    width: 15%;
+    display: inline-block; }
+    .team .characterImage img {
+      border: 1px solid black;
+      border-radius: 3px;
+      width: 100%;
+      margin-bottom: 20px; }
+  .team .characterText {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top; }
+    .team .characterText h1 {
+      margin-top: 0;
+      font-weight: 500; }

@@ -1,8 +1,13 @@
+<div class="teams">
+  <h1>Teams! <span class="headline"> User created teams of Marvel Superheroes.</span><a ui-sref="new_team"><div class="newTeamLink">New team</div></a></h1>
 
-  <h1><strong>Teams!</strong>User created teams of Marvel Superheroes.</h1>
 
-  <div class="newTeamLink"><a ui-sref="new_team">New team</a></div>
 
 <ul>
-  <li ng-repeat = "team in teamsCtrl.teams"><a ui-sref="view_team({ id: team.id })">{{ team.name }} by {{ team.creator }}</a></li>
+  <li ng-repeat = "team in teamsCtrl.teams">
+    <a ui-sref="view_team({ id: team.id })">
+      <div class="teamName">{{ team.name }}</div> by {{ team.creator }}
+    </a>
+  </li>
 </ul>
+</div>

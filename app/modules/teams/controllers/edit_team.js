@@ -66,7 +66,7 @@ class EditTeamController {
 		.get(`https://teams.mybluemix.net/api/heroes?filter[where][team_id]=${this.id}`)
 		.then((response) =>{
 			// console.log(response)
-			this.hero=response.data;
+			this.heroes=response.data;
 		});
 
   }
@@ -100,7 +100,7 @@ class EditTeamController {
   }
   deleteCharacter(hero) {
 		this._$http
-		.get(`https://teams.mybluemix.net/api/heroes/${this.id}`)
+		.delete(`https://teams.mybluemix.net/api/heroes/${hero.id}`)
 		.then((response) =>{
 			this.heroes.splice(this.heroes.indexOf(hero), 1);
 		});

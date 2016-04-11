@@ -1,5 +1,14 @@
-<form ng-submit="newCtrl.createTeam()">
-  <input type="text" placeholder="The Avengers" ng-model="newCtrl.name">
-  <input type="text" placeholder="Jonathan Barket" ng-model="newCtrl.creator">
-  <input type="submit" value="Create Team">
-</form>
+<div class="newTeam">
+  <h1>New Team <span class="headline"> Create a new Team of Marvel superheroes.</span></h1>
+  <form ng-submit="newCtrl.createTeam()">
+    <div class="inputName">
+      <h2>Team Name</h2>
+      <input class="textbox" type="text" placeholder="The Avengers" ng-model="newCtrl.name">
+      <span class="textboxPrompt">What do you want to call your new team of superheroes?</span>
+      <h2>Your Name</h2>
+      <input class="textbox" type="text" placeholder="Jonathan Barket" ng-model="newCtrl.creator">
+      <span class="textboxPrompt">We don't know how to log people in yet, so just tell us your name.</span>
+    </div>
+    <input class="submitButton" type="submit" value="Create Team">
+  </form>
+</div>

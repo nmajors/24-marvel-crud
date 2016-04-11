@@ -1,0 +1,44 @@
+.newTeam{
+  margin: 0 75px;
+  h1 {
+    color: black;
+    font-size: 3.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+  }
+  .headline {
+    color: #777;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  h2{
+    display: inline-block;
+    width: 13%;
+  }
+  .textbox{
+    padding-left: 20px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+  }
+  .textboxPrompt{
+    display: block;
+    padding-left: 13%;
+    color: #777;
+  }
+  .submitButton{
+    background-color: #eee;
+    color: #black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-left: 13%;
+
+  }
+}
